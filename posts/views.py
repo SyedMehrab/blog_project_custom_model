@@ -11,7 +11,7 @@ from .serializers import PostSerializer, UserSerializer
 class ManagerPosts(filters.FilterSet):
     class Meta:
         model = Post
-        fields = ['title']
+        fields = {'title': ['contains']}
 
 
 class PostListCreateApiView(generics.ListCreateAPIView):
